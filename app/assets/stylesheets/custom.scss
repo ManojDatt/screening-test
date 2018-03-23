@@ -1,0 +1,34 @@
+.modal{
+    background: url("/assets/Login-Screen-Background-Wood-5.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+.card-center{
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 10rem;;
+
+	}
+.card-center-1{
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 1rem;;
+
+	}
+.wizard > .steps > ul > li 
+{
+    width: 7% !important;
+	font-size: 10px;
+}
+
+@media only screen and (max-width: 768px)
+{
+.wizard > .steps > ul > li 
+{
+	width: 15% !important;
+	font-size: 6px;
+}
+	
+}
+.wizard > .steps .current a, .wizard > .steps .current a:hover, .wizard > .steps .current a:active{background: #2196f3 !important;}
+

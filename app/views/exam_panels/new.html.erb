@@ -1,0 +1,235 @@
+<div class="card card-center-1 w-75">
+  <div class="card-body">
+    <div class="row">
+     <button type="button" class="btn btn-light col-md-4" id="until10s">Light</button>
+      
+      <div class="col-sm-12">
+        <div class="d-flex p-2"></div>
+
+        <div id="test-async" >
+  <h5></h5>
+   <section>
+    <p>
+      Donec 
+    </p>
+  </section>
+
+  <h5></h5>
+  <section>
+    <p>
+      Donec 
+    </p>
+  </section>
+
+  <h5></h5>
+  <section>
+    <p>
+      Morbi 
+    </p>
+  </section>
+
+  <h5></h5>
+  <section>
+    <p>
+      Quisque 
+    </p>
+  </section>
+  <h5></h5>
+  <section>
+    <p>
+      Donec 
+    </p>
+  </section>
+
+  <h5></h5>
+  <section>
+    <p>
+      Morbi 
+    </p>
+  </section>
+
+  <h5></h5>
+  <section>
+    <p>
+      Quisque 
+    </p>
+  </section>
+  <h5></h5>
+  <section>
+    <p>
+      Donec 
+    </p>
+  </section>
+
+  <h5></h5>
+  <section>
+    <p>
+      Morbi 
+    </p>
+  </section>
+
+  <h5></h5>
+  <section>
+    <p>
+      Quisque 
+    </p>
+  </section>
+  <h5></h5>
+  <section>
+    <p>
+      Donec 
+    </p>
+  </section>
+
+  <h5></h5>
+  <section>
+    <p>
+      Morbi 
+    </p>
+  </section>
+
+  <h5></h5>
+  <section>
+    <p>
+      Quisque 
+    </p>
+  </section>
+  <h5></h5>
+  <section>
+    <p>
+      Donec 
+    </p>
+  </section>
+
+  <h5></h5>
+  <section>
+    <p>
+      Morbi 
+    </p>
+  </section>
+
+  <h5></h5>
+  <section>
+    <p>
+      Quisque 
+    </p>
+  </section>
+  <h5></h5>
+  <section>
+    <p>
+      Donec 
+    </p>
+  </section>
+
+  <h5></h5>
+  <section>
+    <p>
+      Morbi 
+    </p>
+  </section>
+
+  <h5></h5>
+  <section>
+    <p>
+      Quisque 
+    </p>
+  </section>
+  <h5></h5>
+  <section>
+    <p>
+      Donec 
+    </p>
+  </section>
+
+  <h5></h5>
+  <section>
+    <p>
+      Morbi 
+    </p>
+  </section>
+
+  <h5></h5>
+  <section>
+    <p>
+      Quisque 
+    </p>
+  </section>
+  <h5></h5>
+  <section>
+    <p>
+      Donec 
+    </p>
+  </section>
+
+  <h5></h5>
+  <section>
+    <p>
+      Morbi 
+    </p>
+  </section>
+
+  <h5></h5>
+  <section>
+    <p>
+      Quisque 
+    </p>
+  </section>
+  <h5></h5>
+  <section>
+    <p>
+      Donec 
+    </p>
+  </section>
+
+  <h5></h5>
+  <section>
+    <p>
+      Morbi 
+    </p>
+  </section>
+
+  <h5></h5>
+  <section>
+    <p>
+      Quisque 
+    </p>
+  </section>
+</div>
+      </div>
+      <div class="card-footer text-muted">
+        Arka Softwares
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script language="javascript" type="text/javascript">
+var interval = "";
+var timeout = "";
+
+function startInterval()
+{
+    interval = window.setInterval(showAlert,10000);
+}
+function stopInterval()
+{
+    window.clearInterval (interval);
+    interval="";
+}
+function showAlert()
+{
+  startLogout();
+  alert("You have been idle for a while. Click OK or you will be logged out in 1 minute");
+}
+function startLogout()
+{
+  timeout = window.setTimeout(doLogout, 5000);
+}
+function doLogout()
+{
+  location.href='login.asp?msg=1';
+}
+
+startInterval();
+</script>

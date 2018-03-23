@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  question: one
+  content: MyString
+  diagram: MyString
+  has_diagram: false
+  correct: false
+
+two:
+  question: two
+  content: MyString
+  diagram: MyString
+  has_diagram: false
+  correct: false

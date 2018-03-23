@@ -1,0 +1,37 @@
+<div class="card card-center w-75">
+  <div class="card-header text-center">
+    <h3 class="card-title">Screening Test</h3>
+  </div>
+  <div class="card-body">
+  <div class="row">
+  <div class="col-sm-3">
+  <img src="/assets/no-image.png">
+  <h5 class="card-title"><%= current_employee.email.try :upcase %></h5>
+  </div>
+  <div class="col-sm-9">
+    <p class="card-text">Please refer the bellow point while giving test.</p>
+    <ul class="list-group list-group-flush">
+	  <li class="list-group-item">Total exam time will be 40 min.</li>
+	  <li class="list-group-item">You will be given question based on your resume and area of experties</li>
+	  <li class="list-group-item">Within 40 min you can switch between any question for miscorrection</li>
+	  <li class="list-group-item">Your test will be evaluated and send you confirmation mail</li>
+	  <li class="list-group-item">Please click bellow link to start test.</li>
+	</ul>
+	<div class="d-flex p-2"></div>
+	<div class="text-center">
+  <% if @has_pending_exam %>
+		<a href="<%= new_exam_panel_path %>" class="btn btn-info ">Go For Test</a>
+  <% else %>
+      <div class="alert alert-secondary" role="alert">
+        You don't have any pending exam.
+      </div>
+  <% end %>
+	</div>
+    
+  </div>
+  <div class="card-footer text-muted">
+    <%= current_employee.created_at%>
+  </div>
+  </div>
+  </div>
+</div>

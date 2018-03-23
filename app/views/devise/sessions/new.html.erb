@@ -1,0 +1,43 @@
+<div class="modal" tabindex="-1" role="dialog" id="login_modal" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Log In</h5>
+      </div>
+      <div class="modal-body">
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+         
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email" , class: "form-control", "aria-describedby": "emailHelp"%>
+          <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Password</label>
+          <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+        </div>
+        <% if devise_mapping.rememberable? -%>
+        <div class="custom-control custom-switch">
+          <%= f.check_box :remember_me, class: "custom-control-input", id: "customSwitch" %>
+          <span class="custom-control-track"></span>
+          <label class="custom-control-label" for="customSwitch">Remember Me</label>
+        </div>
+        <% end -%>
+        <div class="actions text-center">
+          <%= f.submit "Log in" , class: "btn btn-secondary"%>
+        </div>
+        <br>
+         <%- flash.each do |name, msg| -%>
+         <div class="alert alert-secondary" role="#{name}">
+          <%= msg if msg.is_a?(String) %>
+          </div>
+        <%- end -%>
+
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  $('#login_modal').modal('show')
+</script>
