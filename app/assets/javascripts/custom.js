@@ -1,5 +1,5 @@
 jQuery(document).on("ready page:load", function(){
-	var fiveSeconds = new Date().getTime()+5000;
+	var fiveSeconds = new Date().getTime()+10000;
 	$('#until10s').countdown(fiveSeconds, {elapse: false})
 	.on('update.countdown', function(event) {
 	    var $this = $(this);
@@ -13,6 +13,10 @@ jQuery(document).on("ready page:load", function(){
 	  headerTag: "h5",
 	  bodyTag: "section",
 	  transitionEffect: "slide",
-	  enableFinishButton: false
+	  showFinishButtonAlways: true,
+	  onFinished: function(event){
+	  	alert("finish..");
+	  	$("#finish").submit();
+	  }
 	});
 })
