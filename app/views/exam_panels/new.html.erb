@@ -1,200 +1,34 @@
+<link rel="stylesheet" type="text/css" href="/assets/exam_log.css">
 <div class="card card-center-1 w-75">
   <div class="card-body">
     <div class="row">
-     <button type="button" class="btn btn-light col-md-4" id="until10s">Light</button>
-      
+      <button type="button" class="btn btn-light col-md-4" id="until10s">Light</button>
+
       <div class="col-sm-12">
         <div class="d-flex p-2"></div>
-
+        <form action="<%= exam_panels_path %>" method="post" id="finish">
+        <%= form_for @exam, url: exam_panels_path, method: :post do |f|%>
         <div id="test-async" >
-  <h5></h5>
-   <section>
-    <p>
-      Donec 
-    </p>
-  </section>
+        <%= f.fields_for :questions do |question|%>
+          <h5></h5>
+          <section>
+            <div class="col-md-12">
+                <h2><%= question.object.content %></h2>
+                <% question.object.answers.each do |ans| %>
+                  <div class="form-check">
+                    <label class="toggle label-q">
+                      <%= question.radio_button :is_correct, ans.id %>
+                      <span class="label-text"><%= ans.content%></span>
+                    </label>
+                  </div>
+                <% end %>
+            </div>
+          </section>
 
-  <h5></h5>
-  <section>
-    <p>
-      Donec 
-    </p>
-  </section>
+          <% end %>
 
-  <h5></h5>
-  <section>
-    <p>
-      Morbi 
-    </p>
-  </section>
-
-  <h5></h5>
-  <section>
-    <p>
-      Quisque 
-    </p>
-  </section>
-  <h5></h5>
-  <section>
-    <p>
-      Donec 
-    </p>
-  </section>
-
-  <h5></h5>
-  <section>
-    <p>
-      Morbi 
-    </p>
-  </section>
-
-  <h5></h5>
-  <section>
-    <p>
-      Quisque 
-    </p>
-  </section>
-  <h5></h5>
-  <section>
-    <p>
-      Donec 
-    </p>
-  </section>
-
-  <h5></h5>
-  <section>
-    <p>
-      Morbi 
-    </p>
-  </section>
-
-  <h5></h5>
-  <section>
-    <p>
-      Quisque 
-    </p>
-  </section>
-  <h5></h5>
-  <section>
-    <p>
-      Donec 
-    </p>
-  </section>
-
-  <h5></h5>
-  <section>
-    <p>
-      Morbi 
-    </p>
-  </section>
-
-  <h5></h5>
-  <section>
-    <p>
-      Quisque 
-    </p>
-  </section>
-  <h5></h5>
-  <section>
-    <p>
-      Donec 
-    </p>
-  </section>
-
-  <h5></h5>
-  <section>
-    <p>
-      Morbi 
-    </p>
-  </section>
-
-  <h5></h5>
-  <section>
-    <p>
-      Quisque 
-    </p>
-  </section>
-  <h5></h5>
-  <section>
-    <p>
-      Donec 
-    </p>
-  </section>
-
-  <h5></h5>
-  <section>
-    <p>
-      Morbi 
-    </p>
-  </section>
-
-  <h5></h5>
-  <section>
-    <p>
-      Quisque 
-    </p>
-  </section>
-  <h5></h5>
-  <section>
-    <p>
-      Donec 
-    </p>
-  </section>
-
-  <h5></h5>
-  <section>
-    <p>
-      Morbi 
-    </p>
-  </section>
-
-  <h5></h5>
-  <section>
-    <p>
-      Quisque 
-    </p>
-  </section>
-  <h5></h5>
-  <section>
-    <p>
-      Donec 
-    </p>
-  </section>
-
-  <h5></h5>
-  <section>
-    <p>
-      Morbi 
-    </p>
-  </section>
-
-  <h5></h5>
-  <section>
-    <p>
-      Quisque 
-    </p>
-  </section>
-  <h5></h5>
-  <section>
-    <p>
-      Donec 
-    </p>
-  </section>
-
-  <h5></h5>
-  <section>
-    <p>
-      Morbi 
-    </p>
-  </section>
-
-  <h5></h5>
-  <section>
-    <p>
-      Quisque 
-    </p>
-  </section>
-</div>
+        </div>
+        <% end %>
       </div>
       <div class="card-footer text-muted">
         Arka Softwares
@@ -204,32 +38,32 @@
 </div>
 
 
-<script language="javascript" type="text/javascript">
+<!-- <script language="javascript" type="text/javascript">
 var interval = "";
 var timeout = "";
 
 function startInterval()
 {
-    interval = window.setInterval(showAlert,10000);
+interval = window.setInterval(showAlert,10000);
 }
 function stopInterval()
 {
-    window.clearInterval (interval);
-    interval="";
+window.clearInterval (interval);
+interval="";
 }
 function showAlert()
 {
-  startLogout();
-  alert("You have been idle for a while. Click OK or you will be logged out in 1 minute");
+startLogout();
+alert("You have been idle for a while. Click OK or you will be logged out in 1 minute");
 }
 function startLogout()
 {
-  timeout = window.setTimeout(doLogout, 5000);
+timeout = window.setTimeout(doLogout, 5000);
 }
 function doLogout()
 {
-  location.href='login.asp?msg=1';
+location.href='login.asp?msg=1';
 }
 
 startInterval();
-</script>
+</script> -->

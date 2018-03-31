@@ -8,5 +8,5 @@ class ExamLog < ApplicationRecord
     	variable.result = "PENDING"
     end
     scope :pending_exam, ->{where(result: "PENDING")}
-
+    accepts_nested_attributes_for :questions
 end

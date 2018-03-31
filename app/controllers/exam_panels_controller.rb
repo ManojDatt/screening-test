@@ -6,10 +6,12 @@ class ExamPanelsController < ApplicationController
   end
 
   def new
-  	@exam_log = current_employee.exam_logs.pending_exam.last
+    @exam = current_employee.exam_logs.pending_exam.last
+  	@questions = @exam.questions
   end
 
   def create
+    binding.pry
   end
 
   def show
