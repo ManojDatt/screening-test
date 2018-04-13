@@ -3,4 +3,7 @@ class Question < ApplicationRecord
   has_many :answers
   attr_accessor :is_correct
   accepts_nested_attributes_for :answers
+  def to_s
+     self.content
+  end
 end

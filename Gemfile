@@ -59,3 +59,5 @@ gem 'material_icons'
 gem 'jquery-countdown-rails'
 gem 'rails-jquery-steps'
 gem 'jquery-validation-rails'
+gem 'activeadmin'
+gem "active_material", github: "vigetlabs/active_material"

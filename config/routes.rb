@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :admins, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   root 'exam_panels#index'
 
   devise_for :employees, only: [:sessions]

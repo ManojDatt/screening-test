@@ -1,10 +1,6 @@
-class Employee < ApplicationRecord
+class Admin < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable,:lockable,
+  devise :database_authenticatable, 
          :recoverable, :rememberable, :trackable, :validatable
-  has_many :exam_logs
-  def to_s
-     self.email
-  end
 end
