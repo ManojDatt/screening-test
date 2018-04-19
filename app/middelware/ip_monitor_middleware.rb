@@ -1,5 +1,5 @@
 module ActionDispatch
-  class Request < Rack::Request
+  class Request
     def ip
       @ip ||= super
     end
