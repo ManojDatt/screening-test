@@ -30,8 +30,12 @@ class IpMonitorMiddleware
     Rails.logger.debug "Request IP : #{Request.remote_ip(env)}" 
     Rails.logger.debug "Request User Country : #{Geocoder.search(Request.remote_ip(env)).first.country}"
     Rails.logger.debug "#" * 50
-
-    [@status, @headers, @response]
+    Rails.logger.debug env['PATH_INFO']
+    if ["/exam_panels/new", "/exam_panels", "/admin/login"].include?(env['PATH_INFO'])
+      @status,@headers,@response=ExamPanelsController.action("unauthorized").call(env)
+    else
+      [@status, @headers, @response]
+    end
   end
 end
 

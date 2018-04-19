@@ -5,6 +5,10 @@ class ExamPanelsController < ApplicationController
   	@has_pending_exam = current_employee.exam_logs.pending_exam.present?
   end
 
+  def unauthorized
+    
+  end
+
   def new
     @exam = current_employee.exam_logs.pending_exam.last
   	@questions = @exam.questions
