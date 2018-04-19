@@ -61,3 +61,5 @@ gem 'rails-jquery-steps'
 gem 'jquery-validation-rails'
 gem 'activeadmin'
 gem "active_material", github: "vigetlabs/active_material"
+gem 'rails_12factor', group: :production
+gem 'geocoder'

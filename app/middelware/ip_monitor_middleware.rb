@@ -27,7 +27,8 @@ class IpMonitorMiddleware
     Rails.logger.debug "Request delta time: #{request_ended_on - request_started_on} seconds."
     Rails.logger.debug "=" * 50
     Rails.logger.debug "#" * 50
-    Rails.logger.debug "Request IP : #{Request.remote_ip(env)}"
+    Rails.logger.debug "Request IP : #{Request.remote_ip(env)}" 
+    Rails.logger.debug "Request User Country : #{Geocoder.search(Request.remote_ip(env)).first.country}"
     Rails.logger.debug "#" * 50
 
     [@status, @headers, @response]
